@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/profile'; 
+import bugatti from './bugatti.png';
 
 function App() {
+  const style = {
+    backgroundColor : "#282C34"
+ }
+  const handleName=(name)=> alert(name);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style}>
+      <Profile fullName='Bugatti' bio='i am a very fast Car for Superstars ' profession='live for run' handleName={handleName}> 
+        <img src={bugatti} alt='car'/>
+      </Profile>
     </div>
   );
 }
